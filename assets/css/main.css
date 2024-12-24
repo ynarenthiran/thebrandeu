@@ -1,6 +1,6 @@
 @import url('/assets/css/animate.css');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-/* @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -10,6 +10,7 @@
     --lightGray: #E2E2E2;
     --highlight: #F5F5F5;
     --font: "Raleway", serif;
+    --brandFont: "Comic Neue", serif;
 }
 
 html {
@@ -275,8 +276,19 @@ section h1 {
     display: block;
 }
 
-.about, .contact {
+.contact {
     height: 100%;
+}
+
+.about {
+    color: var(--accent);
+    padding: 0 6vh;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.about b {
+    font-family: var(--brandFont);
 }
 
 .partner-list {
@@ -364,6 +376,11 @@ footer .subscribe .email-container button {
     border-color: transparent;
     text-align: center;
     width: 20vh;
+}
+
+#image-carousel img {
+    height: 50vh;
+    width: 50vh;
 }
 
 @keyframes scroll-left {
