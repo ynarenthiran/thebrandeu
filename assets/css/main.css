@@ -273,8 +273,24 @@ section h1 {
     display: block;
 }
 
-.contact {
+.contact-us {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 0 4vh 10vh;
+}
+
+.contact-us .contact-details {
+    width: 50%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-us .map {
+    width: 50%;
 }
 
 .about {
@@ -313,8 +329,7 @@ section h1 {
 
 footer {
     border-top: 1px #e5e7eb solid;
-    padding: 5vh;
-    background-image: url(../images/footer-bg.jpg);
+    background-image: url(../images/backgrounds/footer-bg.jpg);
     background-size: cover;
 }
 
@@ -375,6 +390,15 @@ footer .subscribe .email-container button {
     border-color: transparent;
     text-align: center;
     width: 20vh;
+}
+
+footer .footer {
+    padding: 2vh 5vh;
+    background: var(--highlight);
+    color: var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #image-carousel img {
