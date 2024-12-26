@@ -238,24 +238,17 @@ section h1 {
 }
 
 .clients .client-list {
-    padding: 2vh;
+    padding: 6vh 2vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-.clients .client-list .scroll-left, .clients .client-list .scroll-right {
-    display: inline-flex;
-}
-
-.client-list .scroll-left {
+.clients .client-list .scroll-left {
+    display: flex;
+    width: fit-content;
     animation: scroll-left 20s linear infinite;
 }
-
-.client-list .scroll-right {
-    animation: scroll-right 20s linear infinite;
-}
-
-/* .clients .client-list .scroll-right:hover, .clients .client-list .scroll-left:hover {
-    animation-play-state: paused;
-} */
 
 .clients .client-list .client {
     width: 25vh;
@@ -268,6 +261,10 @@ section h1 {
     transition: .3s;
     color: var(--accent);
     text-align: center;
+}
+
+.clients h1.trust {
+    padding: 6vh 4vh !important;
 }
 
 .client img {
@@ -285,6 +282,7 @@ section h1 {
     padding: 0 6vh;
     text-align: justify;
     font-size: 20px;
+    line-height: 6vh;
 }
 
 .about b {
@@ -295,6 +293,7 @@ section h1 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    padding: 6vh 0;
     column-gap: 2vh;
     width: 100%;
 }
@@ -384,25 +383,11 @@ footer .subscribe .email-container button {
 }
 
 @keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-        /* Initial position */
+    from {
+        transform: translateX(0%);
     }
 
-    100% {
+    to {
         transform: translateX(-100%);
-        /* End position */
-    }
-}
-
-@keyframes scroll-right {
-    0% {
-        transform: translateX(-100%);
-        /* Start from the left */
-    }
-
-    100% {
-        transform: translateX(0);
-        /* Move completely off-screen to the right */
     }
 }
