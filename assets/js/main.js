@@ -1,30 +1,43 @@
 // Active Menu on Scrolling
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section");
-  const menuItems = document.querySelectorAll(".menu");
+const sections = document.querySelectorAll("section");
+const menuItems = document.querySelectorAll(".menu");
 
-  const setActiveMenu = () => {
-    let currentSection = "";
+const setActiveMenu = () => {
+  let currentSection = "";
 
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      if (pageYOffset >= sectionTop - sectionHeight / 3) {
-        currentSection = section.getAttribute("id");
-      }
-    });
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      currentSection = section.getAttribute("id");
+    }
+  });
 
-    menuItems.forEach((item) => {
-      item.classList.remove("active");
-      if (item.getAttribute("href") === `#${currentSection}`) {
-        item.classList.add("active");
-      }
-    });
-  };
+  menuItems.forEach((item) => {
+    item.classList.remove("active");
+    if (item.getAttribute("href") === `#${currentSection}`) {
+      item.classList.add("active");
+    }
+  });
 
-  window.addEventListener("scroll", setActiveMenu);
-  setActiveMenu();
-});
+  // Scroll to Top
+  const goToTopButton = document.getElementById("goToTop");
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    goToTopButton.classList.add("visible");
+  } else {
+    goToTopButton.classList.remove("visible");
+  }
+};
+
+window.addEventListener("scroll", setActiveMenu);
+setActiveMenu();
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 // Typewriter
 new Typed("#subscribe-text", {
