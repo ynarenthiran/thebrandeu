@@ -515,6 +515,19 @@ footer .social-icons .icon img {
     text-decoration: none;
 }
 
+.offcanvas-body {
+    padding: 1vh !important;
+}
+
+.offcanvas-body .menu {
+    border-color: var(--lightGray) !important;
+}
+
+.offcanvas-body .menu.active {
+    color: var(--highlight) !important;
+    background: var(--accent) !important;
+}
+
 @keyframes scroll-left {
     from {
         transform: translateX(0%);

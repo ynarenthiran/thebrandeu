@@ -15,6 +15,7 @@ const setActiveMenu = () => {
 
   menuItems.forEach((item) => {
     item.classList.remove("active");
+    
     if (item.getAttribute("href") === `#${currentSection}`) {
       item.classList.add("active");
     }
