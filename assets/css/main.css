@@ -470,10 +470,12 @@ footer .social-icons .icon img {
     z-index: 1000;
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    width: 60px;
+    height: 60px;
 }
 
 #goToTop.visible {
-    bottom: 2vh;
+    bottom: 12vh;
     /* Moves up to its visible position */
     opacity: 1;
     /* Becomes fully visible */
