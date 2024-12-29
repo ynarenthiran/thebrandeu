@@ -323,15 +323,29 @@ section h1 {
     column-gap: 3vh;
 }
 
-.contact-us .contact-details {
+.contact-us .contact {
     width: 100%;
     height: 100%;
-
+    color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.contact-us .map {
+.contact-us  .contact .address {
+    width: 50%;
+}
+
+.contact-us .contact .map {
     width: 100%;
     height: 100%;
+}
+
+.contact-us .enquire-us {
+    width: 100%;
+    height: 100%;
+
 }
 
 .about {
@@ -523,6 +537,10 @@ footer .social-icons .icon img {
     height: 45vh;
 }
 
+.laptop .contact-us  .contact .address {
+    width: 60%;
+}
+
 
 /* Tablet Styles */
 .tablet .services .service-list {
@@ -552,15 +570,24 @@ footer .social-icons .icon img {
 .tablet .contact-us {
     height: auto !important;
     flex-direction: column;
-    row-gap: 3vh;
+    row-gap: 2vh;
+    column-gap: 0;
 }
 
-.tablet .contact-details iframe {
+.tablet .contact .address {
+    width: 60%;
+}
+
+.tablet .contact .map iframe {
+    height: 50vh;
+}
+
+.tablet .contact .map, .tablet .enquire-us {
+    height: auto !important;
+}
+
+.tablet .enquire-us iframe {
     height: 232vh;
-}
-
-.tablet .map iframe {
-    height: 100vh;
 }
 
 .tablet .footer {
@@ -610,16 +637,24 @@ footer .social-icons .icon img {
 .large-mobile .contact-us {
     height: auto !important;
     flex-direction: column;
-    row-gap: 3vh;
-    padding: 0 1vh 10vh !important;
+    row-gap: 2vh;
+    column-gap: 0;
 }
 
-.large-mobile .contact-details iframe {
-    height: 232vh;
+.large-mobile .contact .address {
+    width: auto;
 }
 
-.large-mobile .map iframe {
-    height: 100vh;
+.large-mobile .contact .map iframe {
+    height: 50vh;
+}
+
+.large-mobile .contact .map, .large-mobile .enquire-us {
+    height: auto !important;
+}
+
+.large-mobile .enquire-us iframe {
+    height: 250vh;
 }
 
 .large-mobile .footer {
@@ -686,16 +721,24 @@ footer .social-icons .icon img {
 .mobile .contact-us {
     height: auto !important;
     flex-direction: column;
-    row-gap: 3vh;
-    padding: 0 1vh 10vh !important;
+    row-gap: 2vh;
+    column-gap: 0;
 }
 
-.mobile .contact-details iframe {
-    height: 232vh;
+.mobile .contact .address {
+    width: auto;
 }
 
-.mobile .map iframe {
-    height: 100vh;
+.mobile .contact .map iframe {
+    height: 50vh;
+}
+
+.mobile .contact .map, .mobile .enquire-us {
+    height: auto !important;
+}
+
+.mobile .enquire-us iframe {
+    height: 290vh;
 }
 
 .mobile .footer {
