@@ -1,6 +1,10 @@
 // Active Menu on Scrolling
 const sections = document.querySelectorAll("section");
 const menuItems = document.querySelectorAll(".menu");
+// Get the offcanvas element
+const offcanvasElement = document.getElementById('staticBackdrop');
+// Get the offcanvas instance
+const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
 
 const setActiveMenu = () => {
   let currentSection = "";
@@ -15,10 +19,12 @@ const setActiveMenu = () => {
 
   menuItems.forEach((item) => {
     item.classList.remove("active");
-    
     if (item.getAttribute("href") === `#${currentSection}`) {
       item.classList.add("active");
     }
+    item.addEventListener("click", () => {
+      offcanvas?.hide();
+    });
   });
 
   // Scroll to Top

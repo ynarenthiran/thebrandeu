@@ -521,6 +521,7 @@ footer .social-icons .icon img {
 
 .offcanvas-body .menu {
     border-color: var(--lightGray) !important;
+    background-color: #ffffff !important;
 }
 
 .offcanvas-body .menu.active {
