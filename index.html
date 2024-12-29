@@ -34,6 +34,9 @@
             <img src="assets/images/logo.png" alt="Logo">
         </div>
         <div class="menu-list">
+            <a class="menu-icon" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                <span class="material-symbols-outlined">menu</span>
+            </a>
             <a class="menu" href="#home">Home</a>
             <a class="menu" href="#about">About</a>
             <a class="menu" href="#services">Services</a>
@@ -380,6 +383,18 @@
             </div>
         </div>
     </footer>
+    <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+        aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">Menus</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                I will not close if you click outside of me.
+            </div>
+        </div>
+    </div>
     <button id="goToTop" onclick="scrollToTop()"><span class="material-symbols-outlined">arrow_upward</span></button>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script> -->

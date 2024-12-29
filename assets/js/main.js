@@ -31,7 +31,6 @@ const setActiveMenu = () => {
     goToTopButton.classList.remove("visible");
   }
 };
-
 window.addEventListener("scroll", setActiveMenu);
 setActiveMenu();
 
@@ -46,3 +45,18 @@ new Typed("#subscribe-text", {
   backSpeed: 100,
   loop: true,
 });
+
+const screenWidth = window.innerWidth;
+
+// Determine the device type and add the corresponding class
+if (screenWidth >= 992 && screenWidth < 1200) {
+  document.body.classList.add("laptop");
+} else if (screenWidth >= 768 && screenWidth < 992) {
+  document.body.classList.add("tablet");
+} else if (screenWidth >= 394 && screenWidth < 768) {
+  console.log('large-mobile', screenWidth);
+  document.body.classList.add("large-mobile");
+} else if (screenWidth < 394) {
+  console.log('mobile', screenWidth);
+  document.body.classList.add("mobile");
+}
