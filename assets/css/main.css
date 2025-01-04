@@ -68,8 +68,10 @@ header .menu-list .menu {
 }
 
 header .menu-list .menu.active {
-    color: var(--primary) !important;
-    transition: color .4s ease 0s;
+    text-decoration: underline !important;
+    text-decoration-color: var(--theme) !important;
+    text-decoration-thickness: 5px !important;
+    text-underline-offset: 1vh;
 }
 
 header .menu-list .menu-icon {
@@ -82,17 +84,37 @@ section {
     height: 100vh;
 }
 
-#home, #process, #work, #team {
-    background: var(--theme);
-}
-
 section .section-top {
     background: var(--theme);
     height: 20vh;
 }
 
 section .section-content {
-    padding: 0 45vh;
+    padding: 0 40vh;
+}
+
+section .title {
+    padding-top: 17vh;
+    line-height: 0.9em;
+    font-size: 90px;
+    font-weight: bolder;
+}
+
+section .sub-title {
+    font-size: 34px;
+    font-weight: bolder;
+}
+
+section .paragraph {
+    width: 60%;
+    line-height: 1.6em;
+    font-size: 16px;
+    text-align: justify;
+    padding-top: 10vh;
+}
+
+#home, #process, #work, #team {
+    background: var(--theme);
 }
 
 #process .section-top,
@@ -105,24 +127,185 @@ section .section-content {
     height: auto !important;
 }
 
-#home .title {
-    padding: 17vh 0 10vh;
-    line-height: 0.9em;
-    font-size: 90px;
-    font-weight: bolder;
+#services, #process .section-top {
+    background: #42484d !important;
 }
 
-#home .paragraph {
-    line-height: 1.6em;
-    font-size: 16px;
+#services .title {
+    color: var(--theme);
+}
+
+#services .sub-title {
+    padding-top: 2vh;
+}
+
+#services .title::before {
+    content: '';
+    width: 7vh;
+    border-bottom: 1.5vh solid var(--theme);
+    display: flex;
+    margin-bottom: 1.5vh;
+}
+
+#services .paragraph {
+    padding-top: 3vh;
+}
+
+#services .services-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2vh;
+    padding-top: 8vh;
+}
+
+#services .services-list .service::before {
+    content: '';
+    width: 7vh;
+    border-bottom: 1vh solid var(--theme);
+    display: flex;
+    margin-bottom: 1vh;
+}
+
+#process {
+    background: rgb(255 255 255 / 40%) !important;
+}
+
+#process .section-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#process video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#process .title {
     color: var(--primary);
 }
 
-#services {
-    background: #42484d;
+#process .title::before {
+    content: '';
+    width: 7vh;
+    border-bottom: 1.5vh solid var(--theme);
+    display: flex;
+    margin-bottom: 1.5vh;
 }
 
+#process .paragraph {
+    width: 100%;
+    padding-top: 3vh;
+    color: var(--primary);
+}
 
+#process .paragraph .custom-para {
+    padding-top: 3vh;
+}
+
+#philosophy .title {
+    color: var(--primary);
+}
+
+#philosophy .title::before {
+    content: '';
+    width: 7vh;
+    border-bottom: 1.5vh solid var(--theme);
+    display: flex;
+    margin-bottom: 1.5vh;
+}
+
+#philosophy .paragraph {
+    padding-top: 3vh;
+    color: var(--primary);
+}
+
+#philosophy .paragraph .quote {
+    padding-top: 2vh;
+    font-style: italic;
+}
+
+#work .title {
+    color: var(--primary);
+}
+
+#work .title::before {
+    content: '';
+    width: 7vh;
+    border-bottom: 1.5vh solid var(--primary);
+    display: flex;
+    margin-bottom: 1.5vh;
+}
+
+#work .paragraph {
+    padding-top: 3vh;
+    color: var(--primary);
+}
+
+#clients .title {
+    color: var(--primary);
+}
+
+#clients .title::before {
+    content: '';
+    width: 7vh;
+    border-bottom: 1.5vh solid var(--theme);
+    display: flex;
+    margin-bottom: 1.5vh;
+}
+
+#clients .paragraph {
+    padding-top: 3vh;
+    color: var(--primary);
+}
+
+#team .title {
+    color: var(--primary);
+}
+
+#team .title::before {
+    content: '';
+    width: 7vh;
+    border-bottom: 1.5vh solid var(--primary);
+    display: flex;
+    margin-bottom: 1.5vh;
+}
+
+#team .paragraph {
+    padding-top: 3vh;
+    color: var(--primary);
+}
+
+#contact .title {
+    color: var(--primary);
+}
+
+#contact .title::before {
+    content: '';
+    width: 7vh;
+    border-bottom: 1.5vh solid var(--theme);
+    display: flex;
+    margin-bottom: 1.5vh;
+}
+
+#contact .paragraph {
+    padding-top: 3vh;
+    color: var(--primary);
+    width: 30%;
+}
+
+#contact .paragraph p {
+    padding-top: 3vh;
+}
 
 footer {
     height: 12vh;
