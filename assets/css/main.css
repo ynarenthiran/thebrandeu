@@ -161,6 +161,10 @@ section .paragraph {
     padding-top: 8vh;
 }
 
+#services .services-list .service {
+    cursor: pointer;
+}
+
 #services .services-list .service::before {
     content: '';
     width: 7vh;
@@ -431,4 +435,42 @@ footer .social-icons {
 
 footer .social-icons img {
     width: 5vh;
+}
+
+.service-modal .modal-body {
+    padding: 2vh;
+    min-height: 20vh;
+    max-height: 70vh;
+    color: var(--primary) !important;
+}
+
+.service-modal .modal-body .btn-close {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+
+.service-modal .modal-body .modal-title {
+    font-size: 24px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-bottom: 1vh;
+}
+
+.service-modal .modal-body .modal-paragraph {
+    text-align: justify;
+}
+
+.service-modal .modal-body .modal-paragraph p {
+    padding-top: 1vh;
+    font-size: 16px;
+    text-align: justify;
+    margin: 0;
+    margin-top: 1vh;
+}
+
+.service-modal .modal-body .modal-paragraph .quote {
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 1vh;
 }
