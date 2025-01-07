@@ -69,7 +69,7 @@ header .menu-list .menu {
 
 header .menu-list .menu.active {
     text-decoration: underline !important;
-    text-decoration-color: var(--theme) !important;
+    text-decoration-color: var(--highlight) !important;
     text-decoration-thickness: 5px !important;
     text-underline-offset: 1vh;
 }
@@ -111,6 +111,7 @@ section .paragraph {
     font-size: 16px;
     text-align: justify;
     padding-top: 10vh;
+    color: var(--primary);
 }
 
 #home, #process, #work, #team {
@@ -149,6 +150,7 @@ section .paragraph {
 
 #services .paragraph {
     padding-top: 3vh;
+    color: var(--highlight);
 }
 
 #services .services-list {
@@ -234,6 +236,32 @@ section .paragraph {
     font-style: italic;
 }
 
+#philosophy .philosophys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2vh;
+    padding-top: 2vh;
+}
+
+#philosophy .philosophys .philosophy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#philosophy .philosophys .philosophy .ph-icon {
+    color: var(--theme);
+    margin-right: 1vh;
+    font-size: 3rem;
+}
+
+#philosophy .philosophys .philosophy .ph-title {
+    font-size: 16px;
+    font-weight: bolder;
+    color: var(--primary);
+}
+
 #work .title {
     color: var(--primary);
 }
@@ -249,6 +277,10 @@ section .paragraph {
 #work .paragraph {
     padding-top: 3vh;
     color: var(--primary);
+}
+
+#clients {
+    height: auto !important;
 }
 
 #clients .title {
@@ -268,6 +300,54 @@ section .paragraph {
     color: var(--primary);
 }
 
+#clients .owl-carousel {
+    margin: 4vh auto;
+    position: relative;
+}
+
+#clients .owl-carousel .client {
+    width: 25vh;
+    height: 15vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent);
+    text-align: center;
+}
+
+#clients .owl-carousel .client img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    width: auto;
+}
+
+#clients .owl-carousel .owl-dots {
+    display: none;
+}
+
+#clients .owl-carousel .owl-nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#clients .owl-carousel .owl-nav .owl-prev, #clients .owl-carousel .owl-nav .owl-next {
+    height: 100%;
+    font-size: 2.5rem;
+    margin: 0;
+    width: 40px;
+    background: transparent !important;
+}
+
 #team .title {
     color: var(--primary);
 }
@@ -285,8 +365,32 @@ section .paragraph {
     color: var(--primary);
 }
 
+#contact {
+    height: auto !important;
+}
+
+#contact .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 3vh;
+    height: 80%;
+}
+
+#contact .section-content .contact {
+    width: 40%;
+    height: auto;
+}
+#contact .section-content .map {
+    padding-top: 10vh;
+    width: 60%;
+    height: 100%;
+    padding-bottom: 10vh;
+}
+
 #contact .title {
     color: var(--primary);
+    padding-top: 10vh;
 }
 
 #contact .title::before {
@@ -298,13 +402,14 @@ section .paragraph {
 }
 
 #contact .paragraph {
+    width: 90%;
     padding-top: 3vh;
     color: var(--primary);
-    width: 30%;
 }
 
-#contact .paragraph p {
-    padding-top: 3vh;
+#contact .paragraph a {
+    color: var(--primary) !important;
+    text-decoration: none !important;
 }
 
 footer {
