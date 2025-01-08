@@ -1,15 +1,13 @@
 @import url('/assets/css/animate.css');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --primary: #1C1C1C;
-    --secondary: #2E2E2E;
-    --accent: #4D4D4D;
-    --lightGray: #E2E2E2;
-    --highlight: #F5F5F5;
-    --theme: #f5ce0a;
+    --dark: #42484d;
+    --light: #FFFFFF;
+    --theme: #91AC8F;
     --font: "Raleway", serif;
+    --numberFont: "Roboto", serif;
 }
 
 html {
@@ -30,7 +28,7 @@ body {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     position: relative;
-    color: var(--highlight) !important;
+    color: var(--light) !important;
     width: 100% !important;
 }
 
@@ -63,20 +61,20 @@ header .menu-list {
 }
 
 header .menu-list .menu {
-    color: var(--highlight) !important;
+    color: var(--light) !important;
     text-decoration: none !important;
 }
 
 header .menu-list .menu.active {
     text-decoration: underline !important;
-    text-decoration-color: var(--highlight) !important;
+    text-decoration-color: var(--light) !important;
     text-decoration-thickness: 5px !important;
     text-underline-offset: 1vh;
 }
 
 header .menu-list .menu-icon {
     display: none;
-    color: var(--highlight);
+    color: var(--light);
     text-decoration: none;
 }
 
@@ -94,24 +92,28 @@ section .section-content {
 }
 
 section .title {
-    padding-top: 17vh;
+    padding-top: 10vh;
     line-height: 0.9em;
-    font-size: 90px;
+    font-size: 80px;
     font-weight: bolder;
+    text-transform: uppercase;
+    color: var(--dark);
 }
 
-section .sub-title {
-    font-size: 34px;
-    font-weight: bolder;
+section .shortTitle {
+    text-transform: uppercase;
+    color: var(--light);
+    font-size: 60px;
 }
 
 section .paragraph {
     width: 60%;
     line-height: 1.6em;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 500;
     text-align: justify;
-    padding-top: 10vh;
-    color: var(--primary);
+    padding-top: 6vh;
+    color: var(--light);
 }
 
 #home, #process, #work, #team {
@@ -121,23 +123,19 @@ section .paragraph {
 #process .section-top,
 #work .section-top,
 #team .section-top {
-    background: var(--highlight);
+    background: var(--light);
 }
 
 #home {
     height: auto !important;
 }
 
-#services, #process .section-top {
-    background: #42484d !important;
+#services, #clients, #process .section-top {
+    background: var(--dark) !important;
 }
 
 #services .title {
     color: var(--theme);
-}
-
-#services .sub-title {
-    padding-top: 2vh;
 }
 
 #services .title::before {
@@ -150,7 +148,7 @@ section .paragraph {
 
 #services .paragraph {
     padding-top: 3vh;
-    color: var(--highlight);
+    color: var(--light);
 }
 
 #services .services-list {
@@ -183,13 +181,12 @@ section .paragraph {
     width: 100%;
 }
 
-#process video {
-    height: 100%;
+#process img {
+    height: 80%;
     width: 100%;
     object-fit: cover;
     object-position: center center;
     opacity: 1;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -197,98 +194,50 @@ section .paragraph {
 }
 
 #process .title {
-    color: var(--primary);
+    color: var(--theme);
+}
+
+#process .shortTitle {
+    color: var(--dark);
 }
 
 #process .title::before {
     content: '';
     width: 7vh;
-    border-bottom: 1.5vh solid var(--theme);
+    border-bottom: 1.5vh solid var(--dark);
     display: flex;
     margin-bottom: 1.5vh;
 }
 
 #process .paragraph {
-    width: 100%;
-    padding-top: 3vh;
-    color: var(--primary);
+    color: var(--dark);
 }
 
-#process .paragraph .custom-para {
-    padding-top: 3vh;
-}
-
-#philosophy .title {
-    color: var(--primary);
-}
-
-#philosophy .title::before {
-    content: '';
-    width: 7vh;
-    border-bottom: 1.5vh solid var(--theme);
-    display: flex;
-    margin-bottom: 1.5vh;
-}
-
-#philosophy .paragraph {
-    padding-top: 3vh;
-    color: var(--primary);
-}
-
-#philosophy .paragraph .quote {
-    padding-top: 2vh;
-    font-style: italic;
-}
-
-#philosophy .philosophys {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 2vh;
-    padding-top: 2vh;
-}
-
-#philosophy .philosophys .philosophy {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#philosophy .philosophys .philosophy .ph-icon {
-    color: var(--theme);
-    margin-right: 1vh;
-    font-size: 3rem;
-}
-
-#philosophy .philosophys .philosophy .ph-title {
-    font-size: 16px;
-    font-weight: bolder;
-    color: var(--primary);
+#process .paragraph .sub-title {
+    margin-bottom: 2vh;
+    font-weight: bold;
 }
 
 #work .title {
-    color: var(--primary);
+    color: var(--dark);
 }
 
 #work .title::before {
     content: '';
     width: 7vh;
-    border-bottom: 1.5vh solid var(--primary);
+    border-bottom: 1.5vh solid var(--dark);
     display: flex;
     margin-bottom: 1.5vh;
 }
 
 #work .paragraph {
     padding-top: 3vh;
-    color: var(--primary);
-}
-
-#clients {
-    height: auto !important;
+    color: var(--light);
 }
 
 #clients .title {
-    color: var(--primary);
+    color: var(--theme);
+    padding-top: 8vh;
 }
 
 #clients .title::before {
@@ -301,22 +250,22 @@ section .paragraph {
 
 #clients .paragraph {
     padding-top: 3vh;
-    color: var(--primary);
+    color: var(--light);
 }
 
 #clients .owl-carousel {
-    margin: 4vh auto;
+    margin-top: 2vh;
     position: relative;
 }
 
 #clients .owl-carousel .client {
     width: 25vh;
-    height: 15vh;
+    height: 20vh;
     padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--accent);
+    color: var(--theme);
     text-align: center;
 }
 
@@ -352,23 +301,6 @@ section .paragraph {
     background: transparent !important;
 }
 
-#team .title {
-    color: var(--primary);
-}
-
-#team .title::before {
-    content: '';
-    width: 7vh;
-    border-bottom: 1.5vh solid var(--primary);
-    display: flex;
-    margin-bottom: 1.5vh;
-}
-
-#team .paragraph {
-    padding-top: 3vh;
-    color: var(--primary);
-}
-
 #contact {
     height: auto !important;
 }
@@ -377,30 +309,35 @@ section .paragraph {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    column-gap: 3vh;
+    column-gap: 5vh;
     height: 80%;
 }
 
 #contact .section-content .contact {
-    width: 40%;
+    width: 50%;
     height: auto;
 }
+
 #contact .section-content .map {
     padding-top: 10vh;
-    width: 60%;
+    width: 50%;
     height: 100%;
     padding-bottom: 10vh;
 }
 
 #contact .title {
-    color: var(--primary);
+    color: var(--dark);
     padding-top: 10vh;
+}
+
+#contact .shortTitle {
+    color: var(--theme);
 }
 
 #contact .title::before {
     content: '';
     width: 7vh;
-    border-bottom: 1.5vh solid var(--theme);
+    border-bottom: 1.5vh solid var(--dark);
     display: flex;
     margin-bottom: 1.5vh;
 }
@@ -408,11 +345,11 @@ section .paragraph {
 #contact .paragraph {
     width: 90%;
     padding-top: 3vh;
-    color: var(--primary);
+    color: var(--dark);
 }
 
 #contact .paragraph a {
-    color: var(--primary) !important;
+    color: var(--dark) !important;
     text-decoration: none !important;
 }
 
@@ -422,7 +359,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 40vh;
-    background: var(--primary);
+    background: var(--dark);
 }
 
 footer .social-icons {
@@ -441,7 +378,7 @@ footer .social-icons img {
     padding: 2vh;
     min-height: 20vh;
     max-height: 70vh;
-    color: var(--primary) !important;
+    color: var(--theme) !important;
 }
 
 .service-modal .modal-body .btn-close {
@@ -473,4 +410,14 @@ footer .social-icons img {
     font-weight: 600;
     font-style: italic;
     margin-top: 1vh;
+}
+
+/* Common Classes */
+.quote {
+    font-style: italic;
+    font-size: 15px;
+}
+
+.number-font {
+    font-family: var(--numberFont) !important;
 }
