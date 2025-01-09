@@ -88,7 +88,6 @@ section .section-top {
 
 section .section-content {
     padding: 0 40vh;
-    height: 100%;
 }
 
 section .title {
@@ -154,7 +153,7 @@ section .paragraph {
 #services .services-list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     column-gap: 2vh;
     padding-top: 8vh;
 }
@@ -251,7 +250,6 @@ section .paragraph {
     column-gap: 2vh;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 2vh !important;
 }
 
 #work form .form-input {
@@ -449,6 +447,29 @@ footer .social-icons img {
     margin-top: 1vh;
 }
 
+.offcanvas {
+    background: var(--dark) !important;
+    color: var(--light) !important;
+}
+
+.offcanvas-body {
+    padding: 1vh !important;
+}
+
+.offcanvas-body .menu {
+    background: transparent !important;
+    color: var(--light) !important;
+    border: none !important;
+    text-transform: uppercase;
+}
+
+.offcanvas-body .menu.active {
+    text-decoration: underline !important;
+    text-decoration-color: var(--light) !important;
+    text-decoration-thickness: 5px !important;
+    text-underline-offset: 1vh;
+}
+
 /* Common Classes */
 .quote {
     font-style: italic;
@@ -507,4 +528,194 @@ footer .social-icons img {
 
 .tablet #contact .paragraph {
     font-size: 16px !important;
+}
+
+/* Large Mobile Styles */
+.large-mobile .menu-list .menu-icon {
+    display: inline;
+}
+
+.large-mobile .menu-list .menu {
+    display: none;
+}
+
+.large-mobile header, .large-mobile footer, .large-mobile section .section-content {
+    padding: 0 5vh !important;
+}
+
+.large-mobile section .section-content .title {
+    font-size: 50px !important;
+}
+
+.large-mobile section .section-content .title .shortTitle {
+    font-size: 25px !important;
+}
+
+.large-mobile section .section-content .paragraph {
+    padding-top: 3vh;
+    width: 100% !important;
+}
+
+.large-mobile #services .services-list {
+    padding-top: 3vh;
+    flex-wrap: wrap;
+}
+
+.large-mobile #services .services-list .service {
+    width: 48%;
+    margin-bottom: 2vh;
+}
+
+.large-mobile #work form .form-input {
+    width: 100%;
+}
+
+.large-mobile #clients .client {
+    width: 100%;
+}
+
+.large-mobile #contact .section-content {
+    height: auto !important;
+    column-gap: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.large-mobile #contact .section-content .contact, .large-mobile #contact .section-content .map {
+    width: 100%;
+}
+
+.large-mobile #contact .section-content .map {
+    padding: 5vh 0;
+}
+
+.large-mobile #contact .section-content .map iframe {
+    height: 50vh;
+}
+
+.large-mobile #contact .paragraph {
+    font-size: 16px !important;
+}
+
+.large-mobile footer {
+    height: 15vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2vh;
+}
+
+/* Large Mobile Styles */
+.large-mobile .menu-list .menu-icon {
+    display: inline;
+}
+
+.large-mobile .menu-list .menu {
+    display: none;
+}
+
+.large-mobile header, .large-mobile footer, .large-mobile section .section-content {
+    padding: 0 5vh !important;
+}
+
+.large-mobile section .section-content .title {
+    font-size: 50px !important;
+}
+
+.large-mobile section .section-content .title .shortTitle {
+    font-size: 25px !important;
+}
+
+.large-mobile section .section-content .paragraph {
+    padding-top: 3vh;
+    width: 100% !important;
+}
+
+.large-mobile #services .services-list {
+    padding-top: 3vh;
+    flex-wrap: wrap;
+}
+
+.large-mobile #services .services-list .service {
+    width: 48%;
+    margin-bottom: 2vh;
+}
+
+.large-mobile #work form .form-input {
+    width: 100%;
+}
+
+.large-mobile #clients .client {
+    width: 100%;
+}
+
+.large-mobile #contact .section-content {
+    height: auto !important;
+    column-gap: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.large-mobile #contact .section-content .contact, .large-mobile #contact .section-content .map {
+    width: 100%;
+}
+
+.large-mobile #contact .section-content .map {
+    padding: 5vh 0;
+}
+
+.large-mobile #contact .section-content .map iframe {
+    height: 50vh;
+}
+
+.large-mobile #contact .paragraph {
+    font-size: 16px !important;
+}
+
+.large-mobile footer {
+    height: 15vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2vh;
+}
+
+.large-mobile footer .follow-us {
+    display: none;
+}
+
+/* Mobile Styles */
+.mobile section .section-content .title {
+    font-size: 45px !important;
+}
+
+.mobile section .section-content .title .shortTitle {
+    font-size: 20px !important;
+}
+
+.mobile #services .services-list .service {
+    width: 45%;
+}
+
+/* Small Mobile Styles */
+.small-mobile section .section-content .title {
+    font-size: 40px !important;
+}
+
+.small-mobile section .section-content .title .shortTitle {
+    font-size: 17px !important;
+}
+
+.small-mobile section .section-content .paragraph {
+    font-size: 14px !important;
+}
+
+.small-mobile #services {
+    height: auto !important;
+}
+
+.small-mobile #services .services-list .service {
+    width: 45%;
 }

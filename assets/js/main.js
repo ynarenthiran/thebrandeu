@@ -50,7 +50,6 @@ $(document).ready(function () {
   var owl = $(".owl-carousel");
   console.log(owl);
   owl?.owlCarousel({
-    items: 4,
     loop: true,
     nav: true,
     margin: 10,
@@ -58,13 +57,28 @@ $(document).ready(function () {
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
     stagePadding: 50,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      500: {
+        items: 2,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 4,
+      },
+    },
   });
   owl?.trigger("play.owl.autoplay", [5000]);
 });
 
 function updateScreenSize() {
   // Determine the device type and add the corresponding class
-  document.body.className = ''; // Remove all classes
+  document.body.className = ""; // Remove all classes
   const screenWidth = window.outerWidth;
   if (screenWidth >= 992 && screenWidth < 1200) {
     document.body.classList.add("laptop");
@@ -73,8 +87,10 @@ function updateScreenSize() {
   } else if (screenWidth >= 425 && screenWidth < 768) {
     document.body.classList.add("large-mobile");
   } else if (screenWidth >= 321 && screenWidth < 425) {
+    document.body.classList.add("large-mobile");
     document.body.classList.add("mobile");
   } else if (screenWidth < 321) {
+    document.body.classList.add("large-mobile");
     document.body.classList.add("small-mobile");
   }
 }
