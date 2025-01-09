@@ -1,4 +1,3 @@
-@import url('/assets/css/animate.css');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -89,6 +88,7 @@ section .section-top {
 
 section .section-content {
     padding: 0 40vh;
+    height: 100%;
 }
 
 section .title {
@@ -218,6 +218,14 @@ section .paragraph {
     font-weight: bold;
 }
 
+#work {
+    height: auto !important;
+}
+
+#work .section-top {
+    background: #ebeff4;
+}
+
 #work .title {
     color: var(--dark);
 }
@@ -233,6 +241,32 @@ section .paragraph {
 #work .paragraph {
     padding-top: 3vh;
     color: var(--light);
+}
+
+#work form {
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 2vh;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2vh !important;
+}
+
+#work form .form-input {
+    width: 48%;
+}
+
+#work form .btn {
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+    border: none !important;
+}
+
+#work form .btn:disabled {
+    pointer-events: auto;
+    cursor: not-allowed;
 }
 
 #clients .title {
@@ -303,6 +337,10 @@ section .paragraph {
 
 #contact {
     height: auto !important;
+}
+
+#contact .section-top {
+    background: var(--dark);
 }
 
 #contact .section-content {

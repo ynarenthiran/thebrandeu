@@ -105,6 +105,31 @@
                         more, feel free to reach out. We'd be happy to share our work with you. If you're interested,
                         please write to us, and we'll be glad to send you our work.</p>
                 </div>
+                <h4>Fill In Your Info</h4>
+                <form id="enquiryForm">
+                    <div class="form-input mb-3">
+                        <label class="mb-1" for="name">Name*</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-input mb-3">
+                        <label class="mb-1" for="company">Comapny*</label>
+                        <input type="text" class="form-control" id="company" name="company" required>
+                    </div>
+                    <div class="form-input mb-3">
+                        <label class="mb-1" for="email">Email address*</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-input mb-3">
+                        <label class="mb-1" for="phone">Contact*</label>
+                        <input type="text" class="form-control" id="phone" name="contact" required>
+                    </div>
+                    <div class="w-50"></div>
+                    <button id="submitButton" type="submit" class="btn btn-light" disabled>
+                        <span id="spinner" class="spinner-border spinner-border-sm" hidden></span>
+                        <span role="status">Submit</span>
+                    </button>
+                </form>
+                <div id="responseMessage"></div>
             </div>
         </section>
         <section id="clients">
@@ -165,13 +190,17 @@
                     <div class="title">GET IN<br><span class="shortTitle">TOUCH</span></div>
                     <div class="paragraph">
                         <p><b>We can't wait to hear from you</b></p>
-                        <p><img style="margin-right: 1vh;" src="assets/images/contact/phone.png" alt="Phone" /><a class="number-font" href="tel:+919791198967" rel="noopener">+91
+                        <p><img style="margin-right: 1vh;" src="assets/images/contact/phone.png" alt="Phone" /><a
+                                class="number-font" href="tel:+919791198967" rel="noopener">+91
                                 9791198967</a></p>
-                        <p><img style="margin-right: 1vh;" src="assets/images/contact/whatsapp.png" alt="WhatsApp" /><a class="number-font" href="https://wa.me/+919791198967" target="_blank"
+                        <p><img style="margin-right: 1vh;" src="assets/images/contact/whatsapp.png" alt="WhatsApp" /><a
+                                class="number-font" href="https://wa.me/+919791198967" target="_blank"
                                 rel="noopener">+91
                                 9791198967</a></p>
-                        <p><img style="margin-right: 1vh;" src="assets/images/contact/email.png" alt="Email" />thebrandeu@gmail.com</p>
-                        <p><img style="margin-right: 1vh;" src="assets/images/contact/address.png" alt="Address" /><span class="number-font">7</span>th Street Periyar Nagar, Irumbuliyur,
+                        <p><img style="margin-right: 1vh;" src="assets/images/contact/email.png"
+                                alt="Email" />thebrandeu@gmail.com</p>
+                        <p><img style="margin-right: 1vh;" src="assets/images/contact/address.png" alt="Address" /><span
+                                class="number-font">7</span>th Street Periyar Nagar, Irumbuliyur,
                             Periyar Nagar,
                             Tambaram,
                             Chennai, Tamil Nadu 600045, India.</p>

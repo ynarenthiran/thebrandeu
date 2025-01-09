@@ -52,7 +52,7 @@ $(document).ready(function () {
   owl?.owlCarousel({
     items: 4,
     loop: true,
-    nav:true,
+    nav: true,
     margin: 10,
     autoplay: true,
     autoplayTimeout: 5000,
@@ -72,4 +72,84 @@ if (screenWidth >= 992 && screenWidth < 1200) {
   document.body.classList.add("large-mobile");
 } else if (screenWidth < 450) {
   document.body.classList.add("mobile");
+}
+
+const enquiryForm = document.getElementById("enquiryForm");
+const responseMessage = document.getElementById("responseMessage");
+const submitButton = document.getElementById('submitButton');
+const spinner = document.getElementById('spinner');
+enquiryForm.addEventListener("submit", function (e) {
+  responseMessage.innerHTML = ""; // Clear previous response message
+  e.preventDefault(); // Prevent default form submission
+
+  var formData = new FormData(this);
+
+  // Replace with your Google Apps Script URL
+  var scriptURL =
+    "https://script.google.com/macros/s/AKfycbwK7RAJvJwLuQIEYtVrF59J5YuxKBdPajPZgmE56CSk85xhE-CQxqzFdV1M2TxgUEhlug/exec";
+    submitButton.disabled = true;
+    spinner.hidden = false;
+  fetch(scriptURL, { method: "POST", body: formData })
+    .then((response) => response.text())
+    .then((data) => {
+      console.log(data);
+      if (data === "success") {
+        responseMessage.innerHTML = `<span>Hi <b>${formData.get(
+          "name"
+        )}</b>, Thanks for your enquiry! We'll get back to you in 24 hours.</span>`;
+        enquiryForm.reset();
+      } else {
+        responseMessage.innerHTML = `<span>Oops! Something went wrong... Please try again later.</span>`;
+      }
+      submitButton.disabled = false;
+      spinner.hidden = true;
+    })
+    .catch((error) => {
+      console.log(error);
+      responseMessage.innerHTML = `<span>Oops! Something went wrong... Please try again later.</span>`;
+      submitButton.disabled = false;
+      spinner.hidden = true;
+    });
+});
+
+// Form Validation
+const nameInput = document.getElementById("name");
+const companyInput = document.getElementById("company");
+const emailInput = document.getElementById("email");
+const contactInput = document.getElementById("phone");
+nameInput.addEventListener("input", validateForm);
+companyInput.addEventListener("input", validateForm);
+emailInput.addEventListener("input", validateForm);
+contactInput.addEventListener("input", validateForm);
+
+function validateForm() {
+  let isValid = true;
+  responseMessage.innerHTML = ""; // Clear previous response message
+
+  // Validate name
+  if (!nameInput.value.trim()) {
+    isValid = false;
+  }
+
+  // Validate company
+  if (!companyInput.value.trim()) {
+    isValid = false;
+  }
+
+  // Validate email
+  if (!emailInput.value.trim()) {
+    isValid = false;
+  }
+
+  // Validate contact
+  if (!contactInput.value.trim()) {
+    isValid = false;
+  }
+
+  // Enable or disable the submit button
+  submitButton.disabled = !isValid;
+  console.log('isValid', isValid);
+  if (!isValid) {
+    responseMessage.innerHTML = `<span>Please fill in all the required (*) fields.</span>`;
+  }
 }
