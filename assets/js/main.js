@@ -65,15 +65,17 @@ $(document).ready(function () {
 function updateScreenSize() {
   // Determine the device type and add the corresponding class
   document.body.className = ''; // Remove all classes
-  const screenWidth = window.innerWidth;
+  const screenWidth = window.outerWidth;
   if (screenWidth >= 992 && screenWidth < 1200) {
     document.body.classList.add("laptop");
   } else if (screenWidth >= 768 && screenWidth < 992) {
     document.body.classList.add("tablet");
-  } else if (screenWidth >= 450 && screenWidth < 768) {
+  } else if (screenWidth >= 425 && screenWidth < 768) {
     document.body.classList.add("large-mobile");
-  } else if (screenWidth < 450) {
+  } else if (screenWidth >= 321 && screenWidth < 425) {
     document.body.classList.add("mobile");
+  } else if (screenWidth < 321) {
+    document.body.classList.add("small-mobile");
   }
 }
 

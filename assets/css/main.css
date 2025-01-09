@@ -185,7 +185,7 @@ section .paragraph {
     height: 80%;
     width: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: right;
     opacity: 1;
     position: absolute;
     top: 0;
@@ -460,11 +460,7 @@ footer .social-icons img {
 }
 
 /* Laptop Styles */
-.laptop header {
-    padding: 0 25vh !important;
-}
-
-.laptop section .section-content {
+.laptop header, .laptop footer, .laptop section .section-content {
     padding: 0 25vh !important;
 }
 
@@ -484,6 +480,31 @@ footer .social-icons img {
     width: 65% !important;
 }
 
-.laptop #contact .section-content, .laptop footer {
+.laptop #contact .section-content {
     padding: 0 15vh !important;
+}
+
+/* Tablet Styles */
+.tablet header, .tablet footer, .tablet section .section-content {
+    padding: 0 10vh !important;
+}
+
+.tablet section .section-content .title {
+    font-size: 60px !important;
+}
+
+.tablet section .section-content .title .shortTitle {
+    font-size: 45px !important;
+}
+
+.tablet section .section-content .paragraph {
+    width: 90% !important;
+}
+
+.tablet #contact .section-content {
+    padding: 0 5vh !important;
+}
+
+.tablet #contact .paragraph {
+    font-size: 16px !important;
 }
