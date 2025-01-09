@@ -162,6 +162,10 @@ section .paragraph {
     cursor: pointer;
 }
 
+#services .services-list .service img {
+    width: 10%;
+}
+
 #services .services-list .service::before {
     content: '';
     width: 7vh;
@@ -211,7 +215,7 @@ section .paragraph {
 #process .title::before {
     content: '';
     width: 7vh;
-    border-bottom: 1.5vh solid var(--dark);
+    border-bottom: 1.5vh solid var(--theme);
     display: flex;
     margin-bottom: 1.5vh;
 }
@@ -486,6 +490,7 @@ footer .social-icons img {
 
 .number-font {
     font-family: var(--numberFont) !important;
+    font-weight: 400;
 }
 
 /* Laptop Styles */
@@ -568,6 +573,11 @@ footer .social-icons img {
     width: 100% !important;
 }
 
+.large-mobile #home .paragraph .quote {
+    display: flex;
+    flex-direction: column;
+}
+
 .large-mobile #services .services-list {
     padding-top: 3vh;
     flex-wrap: wrap;
@@ -634,7 +644,7 @@ footer .social-icons img {
 }
 
 .large-mobile #contact .paragraph {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 .large-mobile footer {
@@ -682,7 +692,7 @@ footer .social-icons img {
 }
 
 .large-mobile #process .section-content img {
-    height: 40%;
+    height: 50%;
 }
 
 .large-mobile #work form .form-input {
@@ -714,7 +724,7 @@ footer .social-icons img {
 }
 
 .large-mobile #contact .paragraph {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 .large-mobile footer {
@@ -761,4 +771,8 @@ footer .social-icons img {
 
 .small-mobile #services .services-list .service {
     width: 45%;
+}
+
+.small-mobile #process .section-content img {
+    height: 40%;
 }
