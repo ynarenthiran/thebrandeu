@@ -62,22 +62,30 @@ $(document).ready(function () {
   owl?.trigger("play.owl.autoplay", [5000]);
 });
 
-// Determine the device type and add the corresponding class
-const screenWidth = window.innerWidth;
-if (screenWidth >= 992 && screenWidth < 1200) {
-  document.body.classList.add("laptop");
-} else if (screenWidth >= 768 && screenWidth < 992) {
-  document.body.classList.add("tablet");
-} else if (screenWidth >= 450 && screenWidth < 768) {
-  document.body.classList.add("large-mobile");
-} else if (screenWidth < 450) {
-  document.body.classList.add("mobile");
+function updateScreenSize() {
+  // Determine the device type and add the corresponding class
+  document.body.className = ''; // Remove all classes
+  const screenWidth = window.innerWidth;
+  if (screenWidth >= 992 && screenWidth < 1200) {
+    document.body.classList.add("laptop");
+  } else if (screenWidth >= 768 && screenWidth < 992) {
+    document.body.classList.add("tablet");
+  } else if (screenWidth >= 450 && screenWidth < 768) {
+    document.body.classList.add("large-mobile");
+  } else if (screenWidth < 450) {
+    document.body.classList.add("mobile");
+  }
 }
+
+// Initial screen size update
+updateScreenSize();
+
+window.addEventListener("resize", updateScreenSize);
 
 const enquiryForm = document.getElementById("enquiryForm");
 const responseMessage = document.getElementById("responseMessage");
-const submitButton = document.getElementById('submitButton');
-const spinner = document.getElementById('spinner');
+const submitButton = document.getElementById("submitButton");
+const spinner = document.getElementById("spinner");
 enquiryForm.addEventListener("submit", function (e) {
   responseMessage.innerHTML = ""; // Clear previous response message
   e.preventDefault(); // Prevent default form submission
@@ -87,8 +95,8 @@ enquiryForm.addEventListener("submit", function (e) {
   // Replace with your Google Apps Script URL
   var scriptURL =
     "https://script.google.com/macros/s/AKfycbwK7RAJvJwLuQIEYtVrF59J5YuxKBdPajPZgmE56CSk85xhE-CQxqzFdV1M2TxgUEhlug/exec";
-    submitButton.disabled = true;
-    spinner.hidden = false;
+  submitButton.disabled = true;
+  spinner.hidden = false;
   fetch(scriptURL, { method: "POST", body: formData })
     .then((response) => response.text())
     .then((data) => {
@@ -148,7 +156,7 @@ function validateForm() {
 
   // Enable or disable the submit button
   submitButton.disabled = !isValid;
-  console.log('isValid', isValid);
+  console.log("isValid", isValid);
   if (!isValid) {
     responseMessage.innerHTML = `<span>Please fill in all the required (*) fields.</span>`;
   }
